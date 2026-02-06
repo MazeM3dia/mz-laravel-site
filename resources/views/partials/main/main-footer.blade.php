@@ -1,76 +1,14 @@
 {{-- Use for displaying footer content --}}
 
-<footer id="mz-footer" class=" bg-base-200 text-base-content border-t border-t-base-content/20">
-    <div class="container mx-auto px-4 lg:px-6 w-full">
-      <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
-        <div>
-            <h2 class="mb-6 text-sm font-semibold uppercase">Company</h2>
-            <ul class="font-medium">
-                <li class="mb-4">
-                    <a href="#" class=" hover:underline">About</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Careers</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Brand Center</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Blog</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h2 class="mb-6 text-sm font-semibold uppercase">Help center</h2>
-            <ul class="font-medium">
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Discord Server</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Twitter</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Facebook</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h2 class="mb-6 text-sm font-semibold uppercase">Legal</h2>
-            <ul class="font-medium">
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Privacy Policy</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Licensing</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Terms &amp; Conditions</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h2 class="mb-6 text-sm font-semibold uppercase">Download</h2>
-            <ul class="font-medium">
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">iOS</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Android</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Windows</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">MacOS</a>
-                </li>
-            </ul>
-        </div>
+<footer id="mz-footer">
+    <div class="container mx-auto px-4 lg:px-6 py-14 w-full">
+      <div class="first-row">
+        <x-footer.meta />
+        <x-footer.menu-1 />
+        <x-footer.menu-2 />
     </div>
-    <div class="px-4 py-6 md:flex md:items-center md:justify-between">
-        <span class="text-sm sm:text-center">&copy; {{ date('Y') }} <a href="https://flowbite.com/">Flowbite™</a>. All Rights Reserved.
+    <div class="second-row">
+        <span class="text-sm sm:text-center">&copy; {{ date('Y') }} <a href="{{ route('homepage') }}">Flowbite™</a>. All Rights Reserved.
         </span>
         <div class="flex mt-4 sm:justify-center md:mt-0 space-x-2 rtl:space-x-reverse">
           <a href="#" class="hover:text-heading">

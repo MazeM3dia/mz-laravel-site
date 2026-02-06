@@ -3,7 +3,7 @@
 <head>
     @include('partials.main.main-meta')
 </head>
-<body class="font-sans antialiased mt-16 bg-base-100 text-base-content">
+<body class="font-sans text-base lg:text-lg font-medium antialiased mt-16 lg:mt-20 bg-base-100 text-base-content">
 
     @include('partials.main.main-header')
     

@@ -23,10 +23,12 @@
     --font-sans: "Zen Kaku Gothic New", ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-neue: "Neue Bureau Grotesk",sans-serif;
 
+    /* Colors for primary MZ branding */
     --color-base-100: oklch(12% 0.042 264.695); /* Use for background */
     --color-base-200: oklch(20% 0.042 265.755); /* Use for header & footer */
     --color-base-300: oklch(27% 0.041 260.031); /* Use for cards */
-    --color-base-content: oklch(96% 0.007 247.896); /* foreground color */
+    --color-base-content: oklch(92% 0.01 264.695); /* foreground color */
+    --color-base-content-muted: oklch(70% 0.02 264.695); /* foreground color muted */
     --color-primary: oklch(85% 0.138 181.071);
     --color-primary-content: oklch(27% 0.046 192.524);
     --color-secondary: oklch(0% 0 0);
@@ -97,3 +99,50 @@ select:focus[data-flux-control] {
 /* \[:where(&)\]:size-4 {
     @apply size-4;
 } */
+
+
+
+/* MZ HEADER SECTION */
+header#mz-header {
+
+    .mz-logo-img {
+        @apply w-auto h-5 lg:h-6;
+    }
+
+    .mz-navbar-display-wrapper {
+        .navbar-list {
+            @apply font-bold flex flex-col pt-4 pb-2 lg:py-0 lg:flex-row lg:gap-x-8 uppercase;
+
+            .list-item-link {
+                @apply block px-3 py-2 rounded-xl transition-all hover:bg-base-300 active:bg-base-300 focus:bg-base-300 lg:p-0 lg:hover:text-primary lg:active:text-primary lg:focus:text-primary lg:hover:bg-transparent lg:active:bg-transparent lg:focus:bg-transparent;
+            }
+        }
+    }
+}
+
+
+
+/* MZ FOOTER SECTION */
+footer#mz-footer {
+    @apply bg-base-200 text-base-content-muted border-t border-t-base-content-muted/50;
+
+    .first-row {
+        @apply grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 mb-8;
+
+        .footer-meta {
+            @apply col-span-2;
+
+            .mz-logo-img {
+                @apply w-auto h-5 mb-3;
+            }
+
+            p.lead {
+                @apply text-xl mt-3;
+            }
+        }
+    }
+    
+    .second-row {
+        @apply mt-8 pt-8 border-t border-t-base-content-muted/50 flex justify-between;
+    }
+}
